@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .glass-panel {
+        @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl;
+    }
+}
