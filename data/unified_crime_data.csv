@@ -1,0 +1,483 @@
+Latitude,Longitude,DayOfWeek,Month,Hour,Crime_Type,Severity,Location
+31.222455472814534,75.77121077297689,1,5,3,Cybercrime,Low,"Phagwara, Kapurthala"
+31.079836197140256,75.32619582974671,5,8,19,Violent Crime,High,"Shahkot, Rural Jalandhar"
+31.308822457998666,75.56864934739134,6,7,21,Assault,Medium,Jalandhar / Baddowal
+31.3302531377388,75.5529495296374,6,10,22,Sexual Crime,High,"Lohian, Rural Jalandhar"
+31.13572137185555,75.34132309990567,6,7,23,Other,Low,Punjab (Statewide)
+31.136199467649142,75.34676883100107,6,10,10,Other,Low,Punjab (Statewide)
+31.160024204521072,75.34761473415945,3,9,19,Other,Low,Punjab (Statewide)
+31.341013869279095,75.57796470406963,6,6,21,Cybercrime,Low,Ludhiana / Jalandhar
+31.120377624622375,75.34071812887011,5,8,23,Assault,Medium,Punjab (Statewide)
+31.151867218314255,75.34490778291712,5,5,14,Cybercrime,Low,Punjab (Statewide)
+31.22965572718039,75.76686478449534,2,2,19,Other,Low,Phagwara (National Highway)
+31.338941893090777,75.5369816981626,3,1,16,Property Crime,Low,Jalandhar
+31.223601880727124,75.76559449508592,0,5,20,Other,Low,Phagwara–Jalandhar Highway
+31.15721767022625,75.33073249382072,1,10,7,Assault,Medium,Punjab (Statewide)
+31.327279282976708,75.57169948093593,2,1,14,Property Crime,Low,Avtar Nagar
+31.338313322672118,75.57315031281952,3,10,20,Other,Low,Badhowal (near Jagraon)
+31.317593232547942,75.56647834605484,6,7,14,Property Crime,Low,Basti Sheikh
+31.322501202338124,75.580233232995,6,11,8,Other,Low,DAV College area / Pholriwal / Khambrra
+31.327531387071424,75.60058129407257,0,10,0,Other,Low,Gandhi Vanita Ashram
+31.334454744668246,75.57864013468766,1,10,7,Property Crime,Low,Inter-state bus terminus
+31.333638934157126,75.56932826778845,1,8,1,Sexual Crime,High,Ladowali Road
+31.255653730388218,75.6914935351595,4,6,22,Sexual Crime,High,Law Gate Village Miherru (near Phagwara)
+31.327957747133464,75.57237040344337,6,11,10,Property Crime,Low,Laxmipura
+31.328114473270567,75.60113092121172,3,7,7,Sexual Crime,High,Lohian (Jalandhar Rural)
+31.32891170698686,75.5766582641971,0,5,9,Property Crime,Low,Maqsudan
+31.331198567979204,75.57142275960508,1,3,20,Drug Crime,Medium,Mehatpur
+31.323779076680268,75.60589572465227,2,7,0,Property Crime,Low,Model Town Market
+31.33968900981256,75.57972874249153,5,10,20,Property Crime,Low,Nagra village
+31.319358681497643,75.56843448926412,1,8,1,Sexual Crime,High,Nehru Garden
+31.31501877699843,75.55838611568362,5,9,17,Property Crime,Low,Ram Nagar railway crossing
+31.326810880688676,75.5715660855444,1,6,20,Property Crime,Low,Satkartar Avenue (Basti Nau)
+31.327318766042602,75.5753093175606,0,10,11,Property Crime,Low,Urban Estate Phase-II
+31.305234687260196,75.57427577447076,6,12,20,Other,Low,General Highways / Roads
+31.128925320249948,75.33776871084493,6,1,6,Other,Low,Punjab
+31.14281188063517,75.3451887121269,6,1,23,Other,Low,Punjab
+31.318265365413776,75.57812101690983,3,1,14,Violent Crime,High,"Vienna, Austria (linked to Dera Ballan, Jalandhar, Punjab)"
+31.158678333465396,75.31497450640201,3,10,13,Other,Low,Different parts of Punjab
+31.321127505845155,75.65102395707584,3,9,5,Other,Low,"Doaba region, Punjab"
+31.17118761002624,75.3315841053668,1,1,20,Other,Low,Punjab (District not in source)
+31.318400826938454,75.57595664178338,3,5,4,Other,Low,"Basti Sheikh, Jalandhar District"
+31.320011340186912,75.5729110523682,6,2,1,Drug Crime,Medium,"Jamsher Khas, Jalandhar District"
+31.225041301910423,75.76930126003423,3,3,16,Other,Low,"Phagwara, Kapurthala"
+31.21507735562517,75.78228981918048,0,1,18,Violent Crime,High,"Phagwara, Kapurthala"
+31.227314551388606,75.7509407727373,0,2,1,Other,Low,"Phagwara, Kapurthala"
+31.163374280953928,75.3337804376566,0,11,11,Drug Crime,Medium,Punjab
+31.330914647660347,75.55953510274689,0,6,1,Other,Low,"Galwan Valley, Ladakh"
+31.319011878097292,75.59359533423577,6,4,1,Violent Crime,High,"Rayya, Jalandhar"
+31.22083674906177,75.77022978205673,6,8,9,Violent Crime,High,"Chaheru village, Jalandhar-Phagwara Road"
+31.31385223226911,75.5839198323839,0,10,21,Violent Crime,High,"Mahadipur village, Jalandhar"
+31.335822937812157,75.57353773529351,0,10,14,Violent Crime,High,"Kadianwali village, Jalandhar"
+32.03510446132026,75.38941888489228,0,7,16,Terrorism,High,"Dina Nagar, Gurdaspur"
+30.90606163584994,75.86716176609437,0,1,15,Other,Low,"Kidwai Nagar, Ludhiana"
+30.90795748624432,75.86937495882378,2,2,1,Assault,Medium,Ludhiana
+31.312871170086915,75.56937906681094,1,2,0,Assault,Medium,Jalandhar
+31.314639710249946,75.58152735783857,6,4,11,Violent Crime,High,Khanna
+31.310943342934927,75.57289278749852,5,8,4,Violent Crime,High,Chandigarh
+30.8932405014171,75.85860047430333,5,1,0,Violent Crime,High,Ludhiana
+30.899756816386223,75.85559704036142,5,2,17,Violent Crime,High,"Jagera village, Ludhiana"
+30.89508706876772,75.87753983326522,5,7,2,Violent Crime,High,Ludhiana
+30.90147181222098,75.84848356134249,1,10,5,Violent Crime,High,Ludhiana
+31.61513209696376,74.90325306933096,0,10,2,Violent Crime,High,Amritsar
+31.321002715143784,75.58687829459512,4,11,0,Other,Low,"Gandhi Vanita Ashram, Jalandhar"
+31.338075234317063,75.5565418384293,5,11,22,Violent Crime,High,Jalandhar
+31.325918439101383,75.54844388942331,6,11,11,Sexual Crime,High,Jalandhar Rural
+31.23487333779129,75.7775198210976,3,9,22,Cybercrime,Low,"Palahi Road, Phagwara, Kapurthala"
+31.323618172859625,75.57145988749086,5,3,3,Property Crime,Low,"Nagra Road, Jalandhar"
+31.331578378492022,75.55953277303736,2,1,4,Violent Crime,High,Jalandhar district
+31.302434870747533,75.57280560068644,2,1,21,Other,Low,"Johal market, Model Town, Jalandhar"
+31.296292622292686,75.5696810928817,2,10,18,Other,Low,"Naka near Y-point Bhagat Singh Colony, Jalandhar"
+31.318522435244198,75.58467328129866,6,5,21,Violent Crime,High,Mansa district
+31.327930836089077,75.57927304289656,0,1,12,Violent Crime,High,Jalandhar city
+31.316061989048798,75.5650552490332,2,8,5,Property Crime,Low,"Maqsudan, Jalandhar"
+31.31860695828461,75.57925208142638,3,9,22,Property Crime,Low,"Ram Nagar railway crossing, Jalandhar"
+31.279811655949935,75.70010695679781,3,5,4,Violent Crime,High,"Green Valley near Law Gate, Maheru village, Kapurthala"
+31.322787156220336,75.56447535847227,5,11,19,Violent Crime,High,Jalandhar
+30.927446521073556,74.59217296077671,5,11,11,Violent Crime,High,"Near Baba Noor Shah Wali Dargah, Ferozepur"
+32.04363859388097,75.40759274404009,1,11,19,Assault,Medium,"City Police Station, Gurdaspur"
+31.39426000118399,75.3743671102929,4,12,11,Property Crime,Low,"Subhanpur, Kapurthala"
+31.14817518690215,75.32956382139908,3,1,2,Other,Low,Punjab (Statewide)
+31.372545251899275,75.38501169188788,4,1,19,Violent Crime,High,Kapurthala district
+30.806552042682604,75.14619531651583,5,1,15,Violent Crime,High,"Bhinder Kalan village, Moga"
+31.664146394288995,74.86545433691835,6,1,0,Violent Crime,High,"Resort near Verka, Amritsar-Attari Road"
+30.90660905277702,75.83768044959913,0,1,8,Violent Crime,High,"Grain market outskirts, Manuke village, Jagraon, Ludhiana"
+31.332682961962945,75.55954870037394,2,1,4,Violent Crime,High,"Budhlada bus stand, Mansa"
+30.81476872264448,75.1759499855541,3,1,19,Violent Crime,High,"Fatehgarh Korotana village, Moga"
+31.251309400218354,75.68361684291689,4,1,7,Kidnapping,High,"LPU Pro-Chancellor's office / Chehru Chowki, Phagwara"
+31.32832789447978,75.59950022088452,5,2,18,Violent Crime,High,Jalandhar
+31.223714241437033,75.76303196656741,2,4,7,Other,Low,"Jalandhar, Phagwara, and Gurugram"
+31.31150551253571,75.569648965293,4,6,2,Kidnapping,High,"Phillaur/Jhandepeer village, Ludhiana/Jalandhar"
+31.322785494828526,75.56748219686928,2,11,14,Sexual Crime,High,"Ladowali Road, Jalandhar city"
+31.339326706770315,75.58268443615293,2,11,22,Property Crime,Low,"Inter-state bus terminus, Jalandhar city"
+31.33128611450172,75.5547495997794,6,11,19,Property Crime,Low,Jalandhar bus stand police post
+31.25831997911792,75.71273595554212,6,11,22,Other,Low,"LPU Campus and National Highway-1, Phagwara, Kapurthala"
+31.232318126016363,75.70414908914704,6,11,22,Violent Crime,High,"National Highway-1 near LPU, Phagwara, Kapurthala"
+31.219246941236715,75.78215871238416,6,4,22,Drug Crime,Medium,"Phagwara, Kapurthala district"
+31.324617323304995,75.5630926728599,3,12,22,Assault,Medium,"Shivaji Nagar, Basti Danishmandan, Jalandhar"
+31.31918913892948,75.55702682908765,1,12,4,Violent Crime,High,"Guru Ravidass colony near Rama Mandi, Jalandhar"
+31.19872458516165,75.77972373709147,4,4,0,Drug Crime,Medium,"Phagwara sub-division, Kapurthala"
+31.22902864273789,75.78683316775556,0,1,10,Assault,Medium,"Sudhir Sweets, Phagwara"
+31.37638713790437,75.36341203648259,2,1,17,Drug Crime,Medium,"Bheela Dham, Kapurthala"
+31.38762131162513,75.36513670062526,2,1,20,Drug Crime,Medium,"Shekhupur, Kapurthala City"
+31.393637698093894,75.38495629550967,2,1,17,Drug Crime,Medium,"Canal bridge area, Kapurthala"
+31.20393757730355,75.78840819111207,2,1,5,Drug Crime,Medium,"Mehli Gate, Nigaha Mohalla, Phagwara"
+31.214069261275196,75.7705747278678,5,1,9,Drug Crime,Medium,"Gonsarpur cut, Phagwara road, Wazidowal"
+31.216048411603865,75.74736677253208,5,1,7,Drug Crime,Medium,"Satnam Pura area, Phagwara city"
+31.395696099438076,75.37665198892329,1,2,14,Drug Crime,Medium,"Fograwal Bridge near Subhanpur, Kapurthala"
+31.376695422919248,75.3771307876761,1,2,0,Drug Crime,Medium,"Main gate area, Sadar Kapurthala"
+31.341145322836503,75.59083490753981,1,2,16,Drug Crime,Medium,Jalandhar Rural district
+31.267994268181898,75.71017187284359,0,2,4,Other,Low,"LPU Central Library building, Phagwara"
+31.382545922699418,75.3723210863019,4,3,3,Drug Crime,Medium,"Subhanpur, Kapurthala"
+31.391619377664547,75.39871718430817,4,3,11,Drug Crime,Medium,"Truck checkpoint, Kapurthala"
+31.35012348748223,75.37556564519807,4,3,20,Drug Crime,Medium,"Subhanpur area, Kapurthala"
+31.38853252040653,75.37607710617219,4,3,18,Drug Crime,Medium,"Road intercept, Jalandhar-Kapurthala belt"
+31.26021235360297,75.69909881648802,5,4,3,Other,Low,"Outside LPU, Maheru village, Phagwara"
+31.21562896465752,75.77622266811225,2,4,12,Drug Crime,Medium,"Naka point on Jalandhar–Chandigarh corridor, Phagwara"
+31.25303226894682,75.6948582324873,2,4,7,Other,Low,"LPU campus and Lovely Group properties, Phagwara/Gurgaon"
+31.241721126268274,75.78904675840589,3,4,22,Other,Low,"National highway, Phagwara"
+31.32286121337249,75.5707794363576,4,7,13,Violent Crime,High,Chandigarh district
+31.339610043992316,75.58049122012359,0,3,5,Drug Crime,Medium,Jalandhar district
+31.298981051932188,75.57347177765072,1,3,1,Drug Crime,Medium,Jalandhar district
+31.12593210179902,75.34128653197466,5,4,23,Violent Crime,High,"Near Parwanoo, Himachal Pradesh (Punjab-based targets)"
+31.329293024046546,75.58755921160561,3,8,20,Violent Crime,High,Tarn Taran district
+31.337002304824686,75.57097692559232,3,10,12,Violent Crime,High,Chandigarh district
+30.207323117039003,74.94046920558542,2,1,0,Violent Crime,High,Bathinda district
+31.337399134034598,75.58717925025417,1,3,18,Violent Crime,High,Jalandhar district
+31.32524096963364,75.60068196881348,6,5,3,Violent Crime,High,Mansa district
+31.242762880917024,75.78599251358911,1,9,0,Other,Low,"Phagwara, Kapurthala district"
+31.16279952414929,75.33988408435913,6,2,4,Violent Crime,High,Not in source (Punjab)
+31.323361857111802,75.57313290419803,0,6,12,Sexual Crime,High,"Dhilwan Gate, Jalandhar district"
+31.33295577281016,75.56883771910866,2,11,4,Other,Low,"Giddarpindi toll plaza near Lohian Khas, Jalandhar district"
+31.335183890093223,75.5849461154427,4,11,21,Property Crime,Low,Jalandhar district
+31.34151737890431,75.5637997576823,1,1,9,Violent Crime,High,Tarn Taran district
+31.150466081529004,75.34801247254076,5,3,21,Drug Crime,Medium,All districts of Punjab
+31.128536628397036,75.33490285726333,2,5,22,Violent Crime,High,"Lahore, Faisalabad, Sheikhupura, and other districts, Punjab Pakistan"
+31.34814226220836,75.56986250224467,5,8,10,Cybercrime,Low,Jalandhar district
+31.269963382655195,75.70881785029209,4,5,21,Violent Crime,High,"Maheru village, Law Gate area, Jalandhar-Phagwara road"
+31.216692759807827,75.74838161872262,4,5,23,Other,Low,"Phagwara, Kapurthala district"
+31.36683204491318,75.3722144136637,5,9,15,Property Crime,Low,"Baba Pir Chaudhary Road, Kapurthala district"
+31.235491588728653,75.77490733085038,4,9,14,Cybercrime,Low,"Phagwara Resort, Kapurthala district"
+30.900769335073942,75.84991616638793,1,9,4,Other,Low,Ludhiana district
+31.152497769054087,75.32353069397715,2,10,18,Violent Crime,High,"Outskirts of Rahim Yar Khan, Punjab Pakistan"
+31.214568240148733,75.77633151108017,1,10,22,Violent Crime,High,"Eastwood Village, Jalandhar-Phagwara Highway"
+31.266748213189402,75.69885816619872,5,11,9,Violent Crime,High,"Bahawalpur city and various districts, Punjab Pakistan"
+31.309310867731604,75.5668966819295,4,1,7,Sexual Crime,High,"Motor house between Kang Kalan and Kakad Kalan, Lohian, Jalandhar district"
+31.609914281966198,74.89065416009481,3,1,4,Violent Crime,High,"Wedding resort near Verka, Amritsar district"
+31.337726964100145,75.57833555024072,3,1,6,Other,Low,"Pavaran drain, Jalandhar district"
+31.389977227221944,75.36445459603212,4,1,8,Violent Crime,High,"Seenpura Mohalla, Kapurthala district"
+30.83179501447618,75.16539768950851,5,1,10,Violent Crime,High,"Bhinder Kalan village, Moga district"
+31.389676254358903,75.3823879761307,5,1,17,Violent Crime,High,"Fields near a factory, Kapurthala district"
+31.340660682946634,75.57383640497419,6,1,21,Violent Crime,High,"Midda village, Muktsar district"
+30.90913293845216,75.85015761385735,0,1,0,Violent Crime,High,"Manuke village, Jagraon, Ludhiana district"
+31.326491432041063,75.58668763975412,2,1,20,Violent Crime,High,"Budhlada bus stand, Mansa district"
+31.237768532669527,75.75584258411376,3,4,7,Violent Crime,High,"Outside a hotel in Phagwara, Kapurthala district"
+31.228925964398194,75.77049490701476,6,4,13,Drug Crime,Medium,"Near Phagwara Civil Hospital, Kapurthala district"
+31.250745889579175,75.69785783034072,5,5,4,Assault,Medium,"Law Gate near LPU Phagwara, Kapurthala district"
+31.364003900396927,75.38717228507694,5,7,4,Sexual Crime,High,"Maheru village, Kapurthala district"
+30.91527291445852,75.85367932331611,2,8,1,Cybercrime,Low,Ludhiana district
+31.238998589162993,75.7502085419085,3,5,4,Violent Crime,High,"Green Valley, Maheru village, Phagwara, Kapurthala district"
+31.21574337639329,75.77277063887868,4,9,5,Cybercrime,Low,"Phagwara, Kapurthala district"
+31.24504653228692,75.78708491819135,2,10,9,Violent Crime,High,"Eastwood village near Phagwara, Kapurthala district"
+31.095003728701617,75.30974890000954,1,11,13,Assault,Medium,"Sohal Jangir area near Shahkot, Jalandhar district"
+31.314799070988247,75.58463377640798,6,11,18,Assault,Medium,"Basti Mithu area, Jalandhar district"
+31.342386368242547,75.57268373694544,4,9,12,Sexual Crime,High,"Village Kang Kalan, Lohian, Jalandhar district"
+31.26000949864859,75.72537043967645,4,1,7,Assault,Medium,"LPU Phagwara office and Chehru Chowki, Kapurthala district"
+31.33275849304929,75.60039932143813,3,1,17,Other,Low,"Jalandhar City, Jalandhar district"
+31.280950104667294,75.68425446579805,0,2,2,Other,Low,"LPU Campus Central Library, Kapurthala district"
+31.258023054156354,75.77429799284745,1,4,0,Drug Crime,Medium,"Phagwara area, Kapurthala district"
+31.333920184001496,75.56203427984292,1,9,11,Violent Crime,High,"Jagraon and Kharar, Jalandhar/Mohali districts"
+31.155387209542067,75.33475334969246,3,5,22,Violent Crime,High,Punjab
+31.165863992338977,75.33638744097021,2,2,12,Violent Crime,High,Punjab
+31.150088235537577,75.3446490606945,5,3,17,Other,Low,Punjab
+31.156459712771603,75.34132514924596,4,9,5,Other,Low,Punjab
+31.137176157444628,75.33975406741693,2,3,17,Other,Low,Punjab
+31.14344521844367,75.3305417120886,5,11,12,Other,Low,Punjab
+31.133428711659924,75.36332011580386,5,10,11,Violent Crime,High,Punjab
+31.13552890802257,75.33871712881286,3,1,9,Violent Crime,High,Punjab
+31.161441698632803,75.3312945943697,6,4,1,Other,Low,Punjab
+31.154354478035525,75.3444258279036,6,3,17,Other,Low,Punjab
+31.15347284961355,75.3375335121292,3,5,20,Kidnapping,High,Punjab
+31.139052807762933,75.33754912020454,5,9,6,Sexual Crime,High,Punjab
+31.145166779448356,75.33995218000413,0,1,13,Property Crime,Low,Punjab
+31.141375697657054,75.36346894540648,5,8,13,Other,Low,Punjab
+31.134067661677246,75.32991757731664,6,10,10,Property Crime,Low,Punjab
+31.173763388588966,75.34544456984017,0,6,17,Property Crime,Low,Punjab
+31.152291336631837,75.32589120409156,0,2,9,Drug Crime,Medium,Punjab
+31.359265394975026,75.37865770007812,2,12,1,Drug Crime,Medium,"Chaheru village, Kapurthala District"
+31.229912639406432,75.76518218350373,0,6,8,Other,Low,"Sant Sarwan Dass Model School, Phagwara, Kapurthala District"
+31.62804353523703,74.86507494598511,6,9,6,Other,Low,"Amritsar, Punjab"
+31.126214872570856,75.34242192912285,1,1,12,Drug Crime,Medium,Punjab (District not in source)
+31.138057318076925,75.32427219550291,1,1,10,Violent Crime,High,Punjab (District not in source)
+31.308240955209815,75.57952964119025,5,8,18,Property Crime,Low,"Basti Danishmanda, Jalandhar District"
+31.301849507581313,75.5956190905924,1,11,4,Other,Low,"Model Town, Jalandhar District"
+31.325026760069083,75.59514245879699,0,7,22,Property Crime,Low,"Bus Stand Junction, Jalandhar District"
+31.338759252018036,75.57729415915234,5,4,8,Kidnapping,High,"Mithu Basti, Jalandhar District"
+31.316786635894378,75.57810185625347,0,2,7,Sexual Crime,High,"Basti Bawa Khel, Jalandhar District"
+31.516448262637674,75.91264209310145,3,7,8,Violent Crime,High,"Khuda, Hoshiarpur"
+31.370364596393685,75.38489834996386,1,6,6,Violent Crime,High,"Mangu Pur, Kapurthala"
+31.311378614439352,75.59019251947564,1,11,21,Violent Crime,High,"Bhogpur, Uttar Pradesh"
+31.30992907256182,75.5885083817873,4,2,13,Violent Crime,High,"Khan Pur, Jalandhar"
+31.38511092905164,75.36171596740616,3,5,23,Violent Crime,High,"Lakhan Kholae, Kapurthala"
+31.31834633343155,75.55028568264474,0,1,13,Violent Crime,High,"Gilwani, Bihar"
+31.24086311898861,75.76839712457019,1,4,17,Sexual Crime,High,"Patel Nagar, Phagwara, Kapurthala"
+31.328991709384464,75.5955621004414,4,4,23,Violent Crime,High,"Chattapur, Bihar"
+31.350263606166763,75.55707919057922,0,7,1,Violent Crime,High,"Lal Pura, Bihar"
+31.64407537094005,74.86273906493575,3,3,23,Property Crime,Low,"Amritsar, Punjab"
+31.322111019626124,75.58584442929482,5,5,0,Violent Crime,High,"Harik, Tarn Taran"
+31.35589292431112,75.38384389870902,6,7,9,Violent Crime,High,"Sultanpur Lodhi, Kapurthala"
+31.3127620776817,75.582071013843,3,10,23,Other,Low,"Karur, Tamil Nadu"
+31.631928839744948,74.85080153447811,5,11,12,Other,Low,"Amritsar, Punjab"
+31.153847692659195,75.34669472225508,1,4,16,Drug Crime,Medium,Punjab
+31.15780729617366,75.32194636782108,6,11,2,Drug Crime,Medium,Punjab
+31.142942332359862,75.33628217393888,2,6,4,Other,Low,Punjab
+30.933357184762016,74.62594397460519,6,7,1,Violent Crime,High,Ferozepur district
+31.334782694405494,75.58990716483973,0,4,19,Violent Crime,High,"Guru Gobind Singh Medical College and Hospital, Faridkot district"
+31.234881968749573,75.78757319928059,2,1,15,Violent Crime,High,"Near Phagwara, Kapurthala district"
+30.914358936347107,75.86522987928097,6,2,8,Violent Crime,High,Near Ludhiana district
+31.31948587166225,75.58587218225112,3,10,13,Violent Crime,High,Chandigarh district
+31.343272119643267,75.60452642723615,0,2,19,Violent Crime,High,Faridkot district
+31.22325734278633,75.78030363698065,2,4,17,Other,Low,"Phagwara, Kapurthala district"
+31.154765405659397,75.3309113338996,6,1,20,Violent Crime,High,Punjab
+31.135786427611855,75.34091327259677,6,1,2,Other,Low,Punjab
+31.134587764875626,75.34884748096948,6,1,8,Other,Low,Punjab
+31.12334062160107,75.36009893719731,6,1,14,Violent Crime,High,Punjab
+31.12697187063404,75.34659310067705,6,1,19,Other,Low,Punjab
+31.159230093988185,75.35318252803711,6,1,7,Assault,Medium,Punjab
+31.14344947403803,75.32994431198668,6,1,14,Kidnapping,High,Punjab
+31.13505266997975,75.34091233904255,6,1,1,Other,Low,Punjab
+31.154249430815963,75.33551532316403,6,1,15,Sexual Crime,High,Punjab
+31.144885664000377,75.33377916566322,6,1,23,Property Crime,Low,Punjab
+31.143875801460013,75.35132290289316,6,1,22,Property Crime,Low,Punjab
+31.151531400005712,75.33325470964228,6,1,5,Other,Low,Punjab
+31.1460059333756,75.3429033983836,6,1,3,Property Crime,Low,Punjab
+31.138386001416215,75.3376483416563,6,1,8,Property Crime,Low,Punjab
+31.140201073409905,75.3368757362804,6,1,10,Other,Low,Punjab
+31.161105904377692,75.32400228227912,6,1,22,Other,Low,Punjab
+31.228078174877652,75.76187181045354,3,2,14,Property Crime,Low,"Sant Sarwan Dass Model School, Phagwara, Kapurthala District"
+31.141204131458046,75.36146297335426,6,7,15,Other,Low,Punjab
+31.30454352258851,75.58654268454978,5,3,9,Violent Crime,High,Not in source
+30.217633206416213,74.95655211389906,3,7,2,Violent Crime,High,Bathinda district
+31.230504078878592,75.75341151328699,1,4,13,Assault,Medium,"Phagwara, Kapurthala district"
+31.32481279640997,75.58299606774845,6,4,12,Violent Crime,High,Model Town Jalandhar
+31.355173691501815,75.57940545252035,0,10,14,Violent Crime,High,"Basti Mithu / Kadianwali village, Jalandhar"
+31.2290554630862,75.76621040966559,3,5,4,Violent Crime,High,"Maheru village, Phagwara"
+31.300487617180544,75.56172003342465,2,1,7,Cybercrime,Low,Jalandhar city
+31.344526465517752,75.57349077188081,5,3,3,Property Crime,Low,"Nagra Road, Jalandhar"
+31.203050878496654,75.76921298168544,3,5,0,Violent Crime,High,"Green Valley, Maheru village, Phagwara"
+31.31841051766344,75.56874633131137,6,9,22,Property Crime,Low,"Ram Nagar Railway Crossing, Jalandhar"
+31.310040644719216,75.60498990138527,1,12,4,Violent Crime,High,"Guru Ravidass colony, Rama Mandi, Jalandhar"
+31.33229405252801,75.57696818875273,3,12,22,Assault,Medium,"Shivaji Nagar, Basti Danishmandan, Jalandhar"
+31.223776611486176,75.76868727346,3,5,4,Violent Crime,High,"Maheru village, Jalandhar-Phagwara road, Kapurthala"
+31.226931854969234,75.76631962914149,3,4,7,Assault,Medium,"Outside a hotel in Phagwara, Kapurthala"
+31.22280958434775,75.77662572009959,1,10,22,Other,Low,"Eastwood Village, Jalandhar-Phagwara Highway, Jalandhar district"
+31.310284858479495,75.58307655086892,0,11,12,Sexual Crime,High,"Village Kang Kalan, Lohian, Jalandhar district"
+31.26544759995418,75.69916045356875,5,5,4,Assault,Medium,"Law Gate, LPU Phagwara, Kapurthala district"
+31.22647410108807,75.76002970334474,3,5,4,Violent Crime,High,"Maheru village, Phagwara, Kapurthala district"
+31.317566654671396,75.58929564894004,0,6,1,Sexual Crime,High,"Near Dhilwan Gate, Jalandhar district"
+31.30966243815389,75.57786010442601,6,11,7,Other,Low,Jalandhar district
+31.335932823770356,75.57875097883998,3,1,18,Violent Crime,High,"Vienna, Austria"
+31.143302055979287,75.34241441307076,3,10,8,Other,Low,Different parts of Punjab
+31.314322739476303,75.63881149601684,6,8,7,Other,Low,"Doaba region, Punjab"
+31.330805872585287,75.57973565847182,5,11,13,Other,Low,United States (from Chaheru)
+31.336921102062455,75.59332650991439,2,1,0,Violent Crime,High,"Thoothukudi, Tamil Nadu"
+31.33206007345502,75.58701369330555,2,1,1,Other,Low,"Tenkasi district, Tamil Nadu"
+31.342242143458055,75.55265665718534,2,1,15,Violent Crime,High,Maharashtra
+31.30333679766726,75.58433428845449,5,1,4,Assault,Medium,"Badaun district, Uttar Pradesh"
+31.32360278763769,75.57407162922335,2,9,16,Assault,Medium,"Darrang district, Assam"
+31.336086135881708,75.59980803580846,2,1,15,Assault,Medium,"Jorhat district, Assam"
+31.34644124944651,75.56192410077283,1,1,14,Violent Crime,High,Jharkhand
+31.33843803564801,75.56233627758557,1,1,4,Violent Crime,High,Chhattisgarh
+31.322490927922523,75.5681117440038,1,1,17,Violent Crime,High,Jammu & Kashmir
+31.318847541602743,75.57763228655688,1,1,17,Violent Crime,High,Assam
+31.330900864641773,75.58540225524186,0,6,23,Other,Low,"Galwan Valley, Ladakh"
+31.313414849505243,75.58249055846139,4,1,9,Other,Low,"Mankulam, Kerala"
+31.32743744618383,75.56990076216493,3,2,18,Other,Low,Southern India
+31.32021420666355,75.58715136977123,5,11,7,Violent Crime,High,"Leather Complex area, Jalandhar district"
+31.292259399837306,75.57176344726547,0,5,7,Other,Low,"Whitefield, Bengaluru"
+31.33036737230625,75.56509248538998,6,4,14,Violent Crime,High,"Rayyia / Bahadurpur Uppal canal, Jalandhar"
+31.314240509532542,75.57755702516492,3,6,23,Violent Crime,High,"Leather Complex, Jalandhar"
+31.307843947835682,75.56045930524566,0,8,0,Violent Crime,High,"Leather Complex / Shah Changi village, Jalandhar"
+31.311726062273145,75.59855581934306,6,8,15,Violent Crime,High,"Avtaar Nagar / Chaheru village, Jalandhar"
+30.925086764340403,74.62855270520886,5,11,19,Violent Crime,High,Ferozepur district
+30.90334349572401,75.83704904922416,1,10,23,Violent Crime,High,Ludhiana
+30.893986729136234,75.8461780416809,5,7,11,Violent Crime,High,Ludhiana city
+30.89898341802607,75.87127219070679,5,1,0,Violent Crime,High,Ludhiana city
+30.823656778623473,75.15808515940142,3,1,12,Assault,Medium,"Fatehgarh Korotana, Moga"
+31.329812436745318,75.57951443163645,2,1,18,Violent Crime,High,"Budhlada bus stand, Mansa"
+30.914513202416153,75.89514207904271,0,1,7,Violent Crime,High,"Manuke village, Jagraon, Ludhiana"
+31.63782351063327,74.86929253469664,6,1,0,Violent Crime,High,"Verka, Amritsar-Attari Road"
+30.81399132636253,75.1630651267406,5,1,7,Violent Crime,High,"Bhinder Kalan village, Moga"
+31.37132092048441,75.37997190098667,4,1,2,Violent Crime,High,Kapurthala district
+31.316834196315583,75.57198424376833,6,2,17,Violent Crime,High,"Jalandhar city, Jalandhar district"
+31.334474684833676,75.5773023678732,1,4,9,Assault,Medium,"Residence of Manoranjan Kalia, Jalandhar"
+31.32742767145595,75.56162406775861,4,6,5,Kidnapping,High,"Phillaur, Jalandhar district"
+31.31772180536877,75.61293867812905,6,11,14,Sexual Crime,High,"Jalandhar rural, Jalandhar district"
+31.33351082711189,75.57137988502394,5,11,8,Violent Crime,High,"Jalandhar city, Jalandhar district"
+31.23520351452521,75.77271560949097,0,9,16,Cybercrime,Low,"Resort on Palahi Road, Phagwara"
+31.329441751549215,75.56632707025001,4,12,12,Property Crime,Low,"Kamarawa Adda, Bholath"
+31.308035397212805,75.55298976033059,0,1,17,Violent Crime,High,"Jalandhar city, Jalandhar district"
+31.232628731498075,75.77549018806221,4,6,3,Property Crime,Low,"Phagwara, Kapurthala district"
+31.238238159495673,75.76875674068765,5,1,18,Drug Crime,Medium,"Wazidowal road/Gonsarpur cut, Phagwara, Kapurthala"
+31.234944936877586,75.76420655025403,5,1,0,Drug Crime,Medium,"Satnam Pura, Phagwara, Kapurthala"
+31.194052645598322,75.77089637514031,4,9,20,Cybercrime,Low,"Resort in Phagwara, Kapurthala"
+31.38103889394101,75.37822987692951,4,11,10,Other,Low,Giddarpindi toll plaza and other parts of Jalandhar and Kapurthala
+31.23839831507758,75.76452195035692,0,1,19,Assault,Medium,"Sudhir Sweets, Phagwara, Kapurthala"
+31.39662322526767,75.36426397337272,5,9,6,Property Crime,Low,"Baba Pir Chaudhary Road, Kapurthala"
+31.629062499680817,74.88196459427036,3,1,14,Violent Crime,High,Wedding ceremony in Amritsar
+30.80074990347725,75.17645186459355,5,1,4,Violent Crime,High,"Bhunder Kalan village, Moga district"
+31.376858571038497,75.37764934922335,4,1,23,Violent Crime,High,"Seenpura Mohalla, Kapurthala"
+31.324569002409547,75.58707734800599,6,1,18,Violent Crime,High,"Midda village, Muktsar district"
+31.075390996320838,75.33497886129209,0,8,21,Assault,Medium,"Sohal Jangir village, Shahkot, Jalandhar district"
+31.226614194319055,75.77047610854648,4,9,16,Cybercrime,Low,"Phagwara, Kapurthala district"
+31.312874502600835,75.5691974139436,0,6,18,Cybercrime,Low,Jalandhar district
+31.21045524364047,75.77076018139272,1,4,22,Drug Crime,Medium,"Phagwara, Kapurthala district"
+30.889379087241302,75.87676288903282,0,1,7,Violent Crime,High,"Manuke village, Jagraon, Ludhiana district"
+31.61516660138424,74.8719202094557,6,1,11,Violent Crime,High,"Verka resort, Amritsar district"
+30.80415362193734,75.16427111914209,5,1,8,Violent Crime,High,"Bhinder Kalan village, Moga district"
+31.34571077784549,75.58415400087559,6,11,22,Assault,Medium,"Basti Mithu area, Jalandhar district"
+31.380314201046286,75.37941108329366,6,5,2,Drug Crime,Medium,"Chaheru village, Kapurthala District"
+31.343568927088803,75.57601250991853,1,3,15,Other,Low,Sant Sarwan Dass Model School (SSDMS)
+31.35152935028797,75.56297232007725,2,4,18,Assault,Medium,Chaheru village
+31.324946482872114,75.55227038567863,6,7,3,Terrorism,High,5 Districts in Andhra Pradesh
+31.31732830417811,75.58165220287002,0,3,0,Terrorism,High,3 Districts in Arunachal Pradesh
+31.32007980494017,75.5577924147217,6,4,11,Terrorism,High,9 Districts in Assam
+31.317915623408005,75.59219450480639,5,6,19,Terrorism,High,10 Districts in Bihar
+31.311247519205594,75.56511933417448,2,10,13,Terrorism,High,14 Districts in Chhattisgarh
+31.31417966043946,75.55017974639989,1,9,20,Terrorism,High,16 Districts in Jharkhand
+31.30901281706429,75.56515390921945,1,8,0,Terrorism,High,5 Districts in Kerala
+31.32348569315783,75.56657310665719,2,11,23,Terrorism,High,3 Districts in Madhya Pradesh
+31.34178014507218,75.57738257726868,4,9,9,Terrorism,High,3 Districts in Maharashtra
+31.334469929160836,75.60149297050741,2,6,1,Terrorism,High,16 Districts in Manipur
+31.327006977742695,75.58493109228142,2,3,15,Terrorism,High,1 District in Meghalaya
+31.346659207461443,75.55907846366239,5,1,7,Terrorism,High,13 Districts in Nagaland
+31.342179497537085,75.58316895214644,1,4,3,Terrorism,High,10 Districts in Odisha
+31.150965008975245,75.3551948561783,1,9,2,Terrorism,High,4 Districts in Punjab
+31.338362094888115,75.58180883483831,4,6,22,Terrorism,High,6 Districts in Telangana
+31.33995973858174,75.59231387035763,3,7,6,Terrorism,High,5 Districts in West Bengal
+31.33902461254736,75.57686908582826,2,3,11,Terrorism,High,15 Districts in Jammu and Kashmir
+31.319341146591757,75.56503223991783,6,1,22,Assault,Medium,"Tirunelveli district, Tamil Nadu"
+31.303942779062755,75.57691676984794,4,5,7,Other,Low,"Parbhani district, Maharashtra"
+31.31652195464419,75.5574777768348,5,9,13,Other,Low,"Unnao district, Uttar Pradesh"
+31.32103040335802,75.57711973506416,0,1,0,Violent Crime,High,"Agra district, Uttar Pradesh"
+31.323054433674244,75.5603163695101,0,1,14,Violent Crime,High,"Lucknow, Uttar Pradesh"
+31.318246409800693,75.58153052999664,1,1,4,Violent Crime,High,Bihar
+31.315634958866763,75.57073465054629,1,1,5,Violent Crime,High,Bihar
+31.3171985385257,75.57906531442455,1,1,23,Violent Crime,High,Bihar
+31.31952827255184,75.58589638283637,1,1,10,Violent Crime,High,Andhra Pradesh
+31.32758701131305,75.57741640387651,1,1,4,Violent Crime,High,West Bengal
+31.345533796979122,75.59935323008389,1,1,1,Violent Crime,High,Odisha
+31.31039915087085,75.57247928668197,1,1,3,Violent Crime,High,Jharkhand
+31.277916229076165,75.69891362210353,0,2,1,Other,Low,"Lovely Professional University (LPU), Phagwara, Kapurthala"
+31.328995191988074,75.58907595092462,0,8,10,Sexual Crime,High,"Chembur, Mumbai"
+31.30694746848343,75.56283223468417,4,2,21,Sexual Crime,High,Delhi
+31.33556654559599,75.56554754356608,2,5,22,Assault,Medium,Delhi
+31.348561277577218,75.3774104147236,4,6,9,Violent Crime,High,"Dhilwan, Kapurthala"
+31.365046164856853,75.37808209100642,1,6,22,Violent Crime,High,"Talwandi Choudhrian, Kapurthala"
+31.364258181983473,75.36055313847518,4,2,2,Violent Crime,High,"Sadar, Kapurthala"
+31.36667565232673,75.38416940468079,5,12,0,Violent Crime,High,"Sultanpur Lodhi, Kapurthala"
+31.378888029563214,75.39295604835351,5,12,23,Violent Crime,High,"Sultanpur Lodhi, Kapurthala"
+31.390164110277688,75.3788247434735,6,6,20,Violent Crime,High,"Sadar, Kapurthala"
+31.377207689058153,75.39499678910978,5,10,19,Violent Crime,High,"Sadar, Kapurthala"
+31.305433657905915,75.55739709697752,4,7,23,Assault,Medium,"Dharasana, Gujarat"
+31.33903775340613,75.60167627863632,3,2,4,Sexual Crime,High,"Basti Bawa Khel, Jalandhar District"
+31.303978322099724,75.56104572055386,6,1,8,Violent Crime,High,"Patna, Bihar"
+31.341019515406618,75.5829798368709,0,7,6,Violent Crime,High,Himachal Pradesh
+31.325838390170148,75.59263300882965,1,3,10,Violent Crime,High,Ahmedabad
+31.224235016501463,75.76759364892182,1,1,6,Property Crime,Low,"Banga Road Chowk, Phagwara"
+31.371026822347307,75.39454297856324,4,1,2,Assault,Medium,"Kapurthala city, Kapurthala district"
+31.228973593708925,75.76277627970734,6,3,17,Assault,Medium,GT Road near Phagwara
+31.31785481473684,75.56685001544737,6,8,11,Drug Crime,Medium,"Mehatpur, Jalandhar"
+31.339870729934653,75.57311130957704,2,8,23,Property Crime,Low,"Maqsudan, Jalandhar"
+31.311498644622326,75.60218811001981,1,5,0,Assault,Medium,Jalandhar district
+31.306746446705155,75.56605642836263,2,4,16,Property Crime,Low,Jalandhar district
+31.305288336414367,75.58544544251129,0,10,20,Property Crime,Low,Chaheru and surrounding areas
+31.636978802821975,74.85925010913752,0,1,5,Other,Low,Amritsar
+31.150433172541074,75.3373402752433,4,2,14,Other,Low,Punjab
+31.32852280936359,75.56198595846803,5,6,17,Violent Crime,High,Not in source
+31.351580184697273,75.58561519238143,2,5,4,Drug Crime,Medium,Mumbai (concert)
+31.309313923129892,75.5821749528401,2,4,12,Violent Crime,High,"Koderma, Jharkhand"
+31.349911369453565,75.56970680027901,0,5,22,Drug Crime,Medium,Kerala
+31.334004607858592,75.57512416285662,4,1,6,Property Crime,Low,"Karur, Tamil Nadu"
+31.128651118587783,75.34728327070529,6,6,2,Other,Low,"Khewra, Punjab (Pakistan)"
+31.314011363752655,75.59073750386476,4,10,20,Drug Crime,Medium,Snapdeal (Online Platform)
+31.327142966928385,75.5826858860136,0,9,0,Property Crime,Low,"Basti Sheikh and Basti Danishmanda, Jalandhar District"
+31.323857087639407,75.56132789819446,6,1,23,Sexual Crime,High,"Murshidabad, West Bengal"
+31.327303919586416,75.56230892013117,5,4,10,Violent Crime,High,"Lucknow, Uttar Pradesh"
+31.321149165344753,75.5702229685788,1,1,4,Other,Low,"Kochi, Kerala"
+31.323810926548706,75.57702516461653,5,3,17,Property Crime,Low,"Basti Nau, Jalandhar"
+31.33316560247616,75.56497403288827,2,11,15,Other,Low,"Khingra Gate, Jalandhar"
+31.3099134741324,75.58783349688868,2,3,9,Violent Crime,High,Not in source
+31.31208327249477,75.59804763120682,2,12,5,Violent Crime,High,Not in source
+31.32300182510301,75.55568526816863,4,1,9,Other,Low,Not in source
+31.321167542862238,75.58006523457807,3,9,3,Sexual Crime,High,Not in source
+31.312830440241232,75.57490057273924,3,11,3,Sexual Crime,High,Not in source
+31.328235152366304,75.58018657806915,5,10,2,Kidnapping,High,Not in source
+31.332808413142374,75.56889425260802,1,1,7,Kidnapping,High,Not in source
+31.32398390866904,75.56920949126453,0,6,14,Property Crime,Low,Not in source
+31.316459268010764,75.55107307292937,5,8,23,Property Crime,Low,Not in source
+31.32731200317659,75.58477319244305,6,5,9,Property Crime,Low,Not in source
+31.32527875395732,75.56543263480263,4,2,6,Property Crime,Low,Not in source
+31.30368014815287,75.62067951192142,4,4,2,Other,Low,Not in source
+31.32731056672473,75.59512912929046,6,1,16,Property Crime,Low,"Dhule, Maharashtra"
+31.327586843835913,75.56221495773332,6,1,20,Other,Low,"Kokrajhar, Assam"
+31.325057393305134,75.5871934654003,6,1,3,Other,Low,"Kokrajhar, Assam"
+31.313135555562443,75.56724942676045,6,9,14,Sexual Crime,High,South West Delhi
+31.3316979023239,75.56689936343011,0,6,23,Sexual Crime,High,"Chickmagalur district, Karnataka"
+31.14377947316627,75.33268216658915,3,1,17,Violent Crime,High,"Mansa, Punjab"
+31.625860442609437,74.88107062528069,4,2,12,Violent Crime,High,"Resort near Verka, Amritsar-Attari Road"
+31.222331864057463,75.77878894760521,4,6,15,Cybercrime,Low,"Leased hotel on Palahi Road, Phagwara / Ludhiana"
+31.2103031194072,75.77524791895547,2,10,1,Drug Crime,Medium,"Jalandhar–Chandigarh corridor, Phagwara"
+31.262464979652176,75.68692407228201,5,5,4,Violent Crime,High,"Green Valley near LPU, Maheru village, Phagwara"
+31.3275495315639,75.56848909692735,5,1,0,Sexual Crime,High,"Village Kang Kalan, Lohian area"
+31.328861340375912,75.58402450289402,6,2,11,Assault,Medium,Jalandhar area
+31.338327831678146,75.57142552477318,0,5,5,Assault,Medium,"Baddowal, near Jagraon"
+31.321183025359808,75.58591794361554,2,8,17,Property Crime,Low,Jalandhar (Division No. 8 area)
+31.3360257134451,75.577604136072,3,2,5,Violent Crime,High,Batala city
+32.03163006707467,75.37769322102609,0,4,6,Terrorism,High,"Dina Nagar police station and bus, Gurdaspur"
+31.300434813563374,75.564818438467,1,11,5,Violent Crime,High,"Vienna, Austria"
+31.14063753964843,75.34959874238369,6,7,12,Other,Low,Various parts of Punjab
+31.254794665381024,75.70119907366845,5,11,16,Other,Low,"9th floor, Central Library, LPU campus, Phagwara"
+31.252251178890326,75.70726412326631,2,6,4,Assault,Medium,Law Gate near LPU Phagwara
+31.33008309887829,75.57443839040667,6,9,3,Cybercrime,Low,Ludhiana / Jalandhar
+31.31281838514526,75.59262102608344,5,10,3,Cybercrime,Low,Jalandhar
+31.230773131698182,75.7749132243197,0,6,20,Assault,Medium,"Sudhir Sweets, DAV College area, Phagwara"
+31.313503423350895,75.57663818963381,6,8,22,Assault,Medium,"Near Sohal Jangir village, Jalandhar"
+31.22204111503406,75.75609515350502,1,7,1,Violent Crime,High,Eastwood village near Phagwara
+30.916880506861723,74.61354977958486,5,1,15,Violent Crime,High,"Near Baba Noor Shah Wali Dargah, Ferozepur"
+31.353936685747026,75.57042485114174,5,9,1,Violent Crime,High,Chandigarh
+31.220001821627193,75.77038514943818,2,5,0,Violent Crime,High,Near Phagwara
+31.311280168300296,75.55559337645153,5,3,19,Violent Crime,High,Jalandhar
+31.335966570532314,75.58283186696781,4,10,3,Property Crime,Low,"Nagra Road, Jalandhar"
+31.32274368967373,75.57510427351106,5,8,8,Property Crime,Low,"Patel Nagar-Nagra road, Jalandhar"
+31.32315516107089,75.58315388077816,4,3,1,Property Crime,Low,"Maqsudan, Jalandhar"
+31.212818083866104,75.75800648719779,2,1,18,Drug Crime,Medium,"Satnam Pura area, Phagwara"
+31.236659442291945,75.77259355416541,4,2,21,Drug Crime,Medium,"Near village Wazidowal road, Phagwara"
+31.400024899821076,75.40339127472213,0,5,19,Drug Crime,Medium,"Bheela Dham, Kapurthala"
+31.217580047167967,75.78275564523393,6,8,5,Drug Crime,Medium,"Mehli Gate, Nigaha Mohalla, Phagwara"
+31.159776277575364,75.32056629428266,6,9,11,Drug Crime,Medium,Punjab
+31.134071124815573,75.37146499573223,6,8,21,Drug Crime,Medium,Punjab
+31.142272267590236,75.34005911139326,0,2,9,Drug Crime,Medium,Indo-Pak border in Punjab
+31.35452561304294,75.59633802483664,5,8,6,Other,Low,Jalandhar Rural district
+31.265512648427176,75.72026739222686,5,6,6,Kidnapping,High,"LPU and Chehru Chowki, Phagwara"
+31.250602353898508,75.70921565005139,6,1,18,Property Crime,Low,"LPU campus and Highway-1, Phagwara"
+31.257003178422547,75.70452771869112,3,10,20,Sexual Crime,High,"PG room near Law Gate, Village Miherru, Phagwara"
+31.298048947781353,75.56871481709237,3,6,1,Sexual Crime,High,"Near Dhilwan Gate, Jalandhar"
+31.245909810525475,75.72788014444853,3,4,22,Other,Low,"LPU Hostel, Phagwara"
+31.341521913883458,75.59112330979067,4,9,16,Violent Crime,High,"Budhlada bus stand, Mansa"
+31.16793950943342,75.34872801378245,0,6,12,Violent Crime,High,"Kukar village, Punjab"
+31.31500707537141,75.5665508402808,3,7,22,Violent Crime,High,Jalandhar
+31.32702049428402,75.57195483770919,2,9,3,Violent Crime,High,Khanna city
+31.32889988574231,75.57707613123998,4,9,17,Violent Crime,High,Chandigarh
+31.317333734331918,75.5673072966039,5,10,9,Violent Crime,High,Jalandhar
+31.322566273283545,75.58401422378711,2,7,17,Violent Crime,High,Jalandhar / Rayya
+31.327919992889722,75.57781779913631,0,3,17,Violent Crime,High,"Leather Complex area, Jalandhar"
+31.305566425760876,75.5895476995501,3,5,3,Violent Crime,High,"Mahadipur village, Jalandhar"
+31.31819517187136,75.56078404740204,1,2,11,Other,Low,"Y-point Bhagat Singh Colony, Jalandhar"
+31.15342016087177,75.34783749151997,5,5,22,Violent Crime,High,"Punjab, Haryana, Delhi, Chandigarh"
+31.147625410067302,75.33445629233135,2,10,22,Terrorism,High,4 Police Districts in Punjab
+31.142667325319618,75.34328229096883,0,8,9,Drug Crime,Medium,Punjab
+31.130026664514713,75.32442448656923,5,7,10,Violent Crime,High,Pakistan's Punjab
+31.119292791230396,75.35907542632583,5,6,16,Violent Crime,High,Punjab
+31.112559988192185,75.3426561458836,6,4,11,Violent Crime,High,Punjab
+31.146761014637306,75.3402568699389,0,7,4,Kidnapping,High,Punjab
+31.12229396217449,75.33525330017639,6,6,4,Property Crime,Low,Punjab
+31.219169856734585,75.76302532784723,4,11,12,Other,Low,"Phagwara, Punjab"
+31.330440296754162,75.65495383570726,3,4,8,Other,Low,"Doaba region, Punjab"
+31.14468298895941,75.33045578124946,1,1,14,Other,Low,"Khewra Salt Mines, Punjab"
+31.33918256847244,75.5571631629895,6,10,12,Property Crime,Low,Avtar Nagar
+31.33980678424453,75.55948352791913,1,1,3,Property Crime,Low,Basti Sheikh
+31.34190866431702,75.55466511888285,0,11,14,Other,Low,DAV College area / Pholriwal / Khambrra
+31.312747706788304,75.56728029145172,1,6,15,Other,Low,Gandhi Vanita Ashram
+31.333668617006612,75.58503519504036,4,8,23,Property Crime,Low,Inter-state bus terminus
+31.304338315082198,75.57063298636385,6,3,14,Sexual Crime,High,Ladowali Road
+31.22856139231048,75.69850837361108,3,12,12,Sexual Crime,High,Law Gate Village Miherru (near Phagwara)
+31.31291948658491,75.58612470660901,4,9,17,Property Crime,Low,Laxmipura
+31.336521965957996,75.58135916083604,1,2,22,Property Crime,Low,Maqsudan
+31.345533656882306,75.58489848236289,4,8,18,Drug Crime,Medium,Mehatpur
+31.29811424661442,75.58767090194571,2,12,3,Property Crime,Low,Model Town Market
+31.343931554260205,75.57116396236286,3,9,17,Property Crime,Low,Nagra village (Patel Nagar-Nagra road)
+31.31741604164065,75.58051210920436,4,5,21,Sexual Crime,High,Nehru Garden
+31.30929436955705,75.58950542414237,5,10,21,Property Crime,Low,Ram Nagar railway crossing
+31.33649236909501,75.61354095038784,4,7,23,Property Crime,Low,Satkartar Avenue (Basti Nau)
+31.331835441055112,75.58643354487579,2,5,11,Property Crime,Low,Urban Estate Phase-II

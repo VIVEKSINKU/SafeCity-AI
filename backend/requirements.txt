@@ -4,3 +4,9 @@ pandas
 numpy
 scikit-learn
 joblib
+python-dotenv
+google-generativeai
+geopy
+xgboost
+optuna
+imbalanced-learn

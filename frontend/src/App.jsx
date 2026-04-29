@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import axios from 'axios';
 import MapComponent from './components/MapComponent';
 import { ShieldAlert, Crosshair, Map as MapIcon, Clock, Activity, AlertTriangle, Shield, ChevronDown } from 'lucide-react';
 
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const GEOCODE_DEBOUNCE_MS = 400;
 
 function SafetyGauge({ score, level }) {
   const getColor = () => {
@@ -41,6 +42,47 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [selectedHour, setSelectedHour] = useState(new Date().getHours());
   const [selectedDay, setSelectedDay] = useState(new Date().getDay());
+  const [translatedLocation, setTranslatedLocation] = useState("");
+
+  // Debounce timer ref — prevents API spam on rapid map clicks
+  const geocodeTimerRef = useRef(null);
+  // Abort controller ref — cancels in-flight geocode requests when user clicks again
+  const geocodeAbortRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedLocation) {
+      setTranslatedLocation("AI Translating...");
+
+      // Clear any pending debounce timer
+      if (geocodeTimerRef.current) clearTimeout(geocodeTimerRef.current);
+      // Cancel any in-flight request
+      if (geocodeAbortRef.current) geocodeAbortRef.current.abort();
+
+      geocodeTimerRef.current = setTimeout(() => {
+        const controller = new AbortController();
+        geocodeAbortRef.current = controller;
+
+        axios.post('http://127.0.0.1:5000/api/geocode', {
+          Latitude: selectedLocation.lat,
+          Longitude: selectedLocation.lng
+        }, { signal: controller.signal })
+        .then(res => {
+          setTranslatedLocation(res.data.location_name);
+        })
+        .catch((err) => {
+          if (!axios.isCancel(err)) {
+            setTranslatedLocation("Unknown Location");
+          }
+        });
+      }, GEOCODE_DEBOUNCE_MS);
+    } else {
+      setTranslatedLocation("");
+    }
+
+    return () => {
+      if (geocodeTimerRef.current) clearTimeout(geocodeTimerRef.current);
+    };
+  }, [selectedLocation]);
 
   const handlePredict = async () => {
     if (!selectedLocation) {
@@ -55,7 +97,10 @@ function App() {
         Longitude: selectedLocation.lng,
         Hour: selectedHour,
         DayOfWeek: selectedDay,
-        Month: new Date().getMonth() + 1
+        Month: new Date().getMonth() + 1,
+        // Forward the already-resolved name so backend skips redundant geocoding
+        location_name: translatedLocation && translatedLocation !== "AI Translating..."
+          ? translatedLocation : ""
       };
 
       const res = await axios.post('http://127.0.0.1:5000/api/predict', payload);
@@ -99,14 +144,19 @@ function App() {
 
             {/* Location Display */}
             <div className="bg-slate-800/50 p-3 rounded-lg mb-4 border border-slate-700">
-              <div className="flex justify-between items-center mb-1">
+              <div className="flex justify-between items-center mb-2">
                 <span className="text-xs text-slate-400">Target Location</span>
                 <MapIcon className="w-3 h-3 text-slate-500" />
               </div>
               <div className="font-mono text-sm text-blue-300">
-                {selectedLocation
-                  ? `${selectedLocation.lat.toFixed(4)}° N, ${selectedLocation.lng.toFixed(4)}° E`
-                  : "Click on the map to select"}
+                {selectedLocation ? (
+                  <>
+                    <div className="text-white font-sans text-base mb-1 truncate">{translatedLocation}</div>
+                    <div className="text-xs text-slate-400">{selectedLocation.lat.toFixed(4)}° N, {selectedLocation.lng.toFixed(4)}° E</div>
+                  </>
+                ) : (
+                  "Click on the map to select"
+                )}
               </div>
             </div>
 
@@ -155,9 +205,28 @@ function App() {
           {/* Prediction Result Box */}
           {prediction && (
             <div className="glass-panel p-6">
-              <h3 className="text-lg font-semibold text-blue-300 mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-blue-300 mb-3 flex items-center gap-2">
                 <Clock className="w-5 h-5 text-blue-400" /> Threat Assessment
               </h3>
+
+              {prediction.location_name && (
+                <div className="text-sm text-slate-300 mb-4 bg-slate-800/50 p-2 rounded border border-slate-700 flex items-center gap-2">
+                  <MapIcon className="w-4 h-4 text-blue-400" />
+                  <span className="truncate">{prediction.location_name}</span>
+                </div>
+              )}
+
+              {/* Gemini AI Insight Card */}
+              {prediction.gemini_insight && (
+                <div className="mb-4 bg-indigo-900/40 border border-indigo-500/30 p-3 rounded-lg shadow-inner">
+                  <div className="text-xs text-indigo-300 font-semibold mb-1 flex items-center gap-1">
+                    <Activity className="w-3 h-3" /> AI Safety Assistant
+                  </div>
+                  <p className="text-sm text-indigo-100/90 leading-relaxed italic">
+                    "{prediction.gemini_insight}"
+                  </p>
+                </div>
+              )}
 
               {/* Safety Score Gauge */}
               <SafetyGauge score={prediction.safety_score} level={prediction.safety_level} />
