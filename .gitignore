@@ -50,3 +50,6 @@ venv.bak/
 
 # Logs
 *.log
+
+# Data
+data/
