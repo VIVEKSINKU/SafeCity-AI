@@ -10,8 +10,8 @@ from functools import lru_cache
 from dotenv import load_dotenv
 import google.generativeai as genai
 from geopy.geocoders import Nominatim
+from scipy.spatial import KDTree
 
-# ─── Feature engineering (must match train_model.py exactly) ────────────────
 CITY_LAT, CITY_LNG = 31.3260, 75.5762
 
 FEATURES = [
@@ -25,13 +25,11 @@ FEATURES = [
     'Lat_Zone', 'Lng_Zone',
 ]
 
-# Precomputed lat/lng bin edges (match training data range)
 _LAT_BINS = np.linspace(30.9, 31.6, 7)
 _LNG_BINS = np.linspace(74.8, 76.0, 7)
 
 def engineer_features(lat: float, lng: float, hour: int,
                       day_of_week: int, month: int) -> pd.DataFrame:
-    """Build the same 18-feature row that was used during training."""
     is_weekend = 1 if day_of_week >= 5 else 0
     is_night   = 1 if (hour >= 22 or hour <= 5) else 0
     is_evening = 1 if (18 <= hour < 22) else 0
@@ -80,7 +78,6 @@ else:
 
 geolocator = Nominatim(user_agent="safecity_ai")
 
-# ─── Load data and models once at startup ───────────────────────────
 try:
     df = pd.read_csv(DATA_PATH)
     model = joblib.load(MODEL_PATH)
@@ -92,7 +89,25 @@ except Exception as e:
     model = None
     encoder = None
 
-# ─── Pre-compute hotspots at startup (cached) ──────────────────────
+# ─── Build spatial index for coverage-area validation ────────────────
+# Threshold in degrees (~0.02° ≈ 2.2 km).  Clicks farther than this
+# from every known data point are rejected as "out of coverage".
+COVERAGE_THRESHOLD_DEG = 0.02
+_kd_tree = None
+
+if not df.empty:
+    _coords = df[['Latitude', 'Longitude']].values
+    _kd_tree = KDTree(_coords)
+    print(f"Built KDTree spatial index with {len(_coords)} points  "
+          f"(coverage threshold = {COVERAGE_THRESHOLD_DEG}°)")
+
+def is_within_coverage(lat: float, lng: float) -> bool:
+    """Return True if (lat, lng) is within COVERAGE_THRESHOLD_DEG of any dataset point."""
+    if _kd_tree is None:
+        return False
+    dist, _ = _kd_tree.query([lat, lng])
+    return dist <= COVERAGE_THRESHOLD_DEG
+
 CACHED_HOTSPOTS = []
 
 def compute_hotspots():
@@ -115,20 +130,17 @@ def compute_hotspots():
                 
                 primary_crime = group['Crime_Type'].mode()[0] if not group.empty else "Unknown"
                 
-                # Top 3 crimes for richer analytics
                 crime_counts = group['Crime_Type'].value_counts().head(3)
                 top_crimes = [{"type": ct, "count": int(cc)} for ct, cc in crime_counts.items()]
                 
                 rush_hour = int(group['Hour'].mode()[0]) if 'Hour' in group.columns and not group.empty else 12
                 rush_hour_str = f"{rush_hour:02d}:00 - {(rush_hour+1)%24:02d}:00"
                 
-                # Hour distribution for the cluster
                 hour_dist = group['Hour'].value_counts().sort_index().to_dict()
                 peak_hours = sorted(hour_dist.items(), key=lambda x: x[1], reverse=True)[:3]
                 
                 location_name = group['Location'].mode()[0] if 'Location' in group.columns and not group.empty else "Unknown Region"
                 
-                # Severity breakdown
                 sev_counts = group['Severity'].value_counts().to_dict()
                 
                 weight = min(1.0, max(0.2, incident_count / 15))
@@ -158,7 +170,6 @@ def compute_hotspots():
 
 compute_hotspots()
 
-# ─── Severity weights for safety score calculation ──────────────────
 SEVERITY_WEIGHTS = {
     'Violent Crime': 10,
     'Sexual Crime': 10,
@@ -172,25 +183,19 @@ SEVERITY_WEIGHTS = {
 }
 
 def calculate_safety_score(lat, lng, hour, prediction_probs, class_names):
-    """
-    Compute a 0-100 safety score. 100 = perfectly safe, 0 = extremely dangerous.
-    Factors: predicted crime probabilities, proximity to hotspots, time of day.
-    """
-    # 1. Crime probability danger (weighted by severity)
+
     weighted_danger = 0
     for prob, crime_name in zip(prediction_probs, class_names):
         weighted_danger += prob * SEVERITY_WEIGHTS.get(crime_name, 4)
-    # Normalize: max possible is 10 (if 100% of worst crime)
-    crime_score = (weighted_danger / 10) * 40  # contributes up to 40 points of danger
+
+    crime_score = (weighted_danger / 10) * 40
     
-    # 2. Proximity to hotspots
     hotspot_danger = 0
     for hs in CACHED_HOTSPOTS:
         dist = np.sqrt((lat - hs['lat'])**2 + (lng - hs['lng'])**2)
         if dist < 0.02:  # ~2km
             hotspot_danger = max(hotspot_danger, hs['weight'] * 30)
     
-    # 3. Time of day risk (late night = more dangerous)
     night_hours = {0: 15, 1: 18, 2: 20, 3: 20, 4: 18, 5: 12, 
                    22: 12, 23: 15}
     time_danger = night_hours.get(hour, 5)
@@ -199,8 +204,6 @@ def calculate_safety_score(lat, lng, hour, prediction_probs, class_names):
     safety_score = max(5, round(100 - total_danger))
     
     return safety_score
-
-# ─── Routes ─────────────────────────────────────────────────────────
 
 @app.route('/', methods=['GET'])
 def index():
@@ -230,17 +233,15 @@ def get_historical_data():
 def get_hotspots():
     return jsonify(CACHED_HOTSPOTS)
 
-# ─── Cached geocoding (single source of truth) ──────────────────────
+
 _geocode_lock = threading.Lock()
-_geocode_cache = {}        # (rounded_lat, rounded_lng) -> location_name
-_PRECISION = 4             # 4 decimal places ≈ 11m accuracy
+_geocode_cache = {}        
+_PRECISION = 4             
 
 def _round_coord(lat, lng):
-    """Round coordinates to cache-friendly precision."""
     return round(lat, _PRECISION), round(lng, _PRECISION)
 
 def _reverse_geocode_raw(lat, lng):
-    """Nominatim-only reverse geocode → structured name (no Gemini)."""
     try:
         location = geolocator.reverse((lat, lng), exactly_one=True, timeout=3)
         if location:
@@ -257,7 +258,6 @@ def _reverse_geocode_raw(lat, lng):
     return "Unknown Location", ""
 
 def _format_with_gemini(raw_name, full_address):
-    """Use Gemini to clean-format the address (optional enhancement)."""
     if not gemini_model or raw_name == "Unknown Location":
         return raw_name
     try:
@@ -274,10 +274,7 @@ def _format_with_gemini(raw_name, full_address):
         return raw_name
 
 def get_location_name(lat, lng, use_gemini=True):
-    """
-    Cached geocoding lookup.  Nearby coordinates (within ~11m) share a
-    single cached result, so rapid map clicks don't spam external APIs.
-    """
+
     key = _round_coord(lat, lng)
     with _geocode_lock:
         if key in _geocode_cache:
@@ -291,7 +288,7 @@ def get_location_name(lat, lng, use_gemini=True):
 
     with _geocode_lock:
         _geocode_cache[key] = final_name
-        # Cap cache at 500 entries (LRU-style eviction)
+
         if len(_geocode_cache) > 500:
             oldest = next(iter(_geocode_cache))
             del _geocode_cache[oldest]
@@ -320,8 +317,16 @@ def predict_crime():
     lat  = float(req['Latitude'])
     lng  = float(req['Longitude'])
     hour        = int(req.get('Hour',      now.hour))
-    day_of_week = int(req.get('DayOfWeek', now.weekday()))   # 0=Mon … 6=Sun
+    day_of_week = int(req.get('DayOfWeek', now.weekday()))   
     month       = int(req.get('Month',     now.month))
+
+    # ── Coverage check: reject locations outside heatmapped areas ────
+    if not is_within_coverage(lat, lng):
+        return jsonify({
+            "out_of_coverage": True,
+            "message": "This location is outside the crime-data coverage area. "
+                       "Please select a location within the heatmapped zones."
+        }), 200
     
     if model:
         input_data   = engineer_features(lat, lng, hour, day_of_week, month)
@@ -332,7 +337,6 @@ def predict_crime():
         predicted_type = "Petty Crime" if raw_predicted_type.lower() == "other" else raw_predicted_type
         max_prob = max(crime_prob)
         
-        # Top 3 predicted crimes
         top_indices = np.argsort(crime_prob)[::-1][:3]
         top_predictions = []
         for idx in top_indices:
@@ -343,10 +347,8 @@ def predict_crime():
                 "probability": float(round(float(crime_prob[idx]) * 100, 1))
             })
         
-        # Safety score
         safety = calculate_safety_score(lat, lng, hour, crime_prob, encoder.classes_)
         
-        # Safety level label
         if safety >= 70:
             safety_level = "Safe"
         elif safety >= 40:
@@ -354,14 +356,10 @@ def predict_crime():
         else:
             safety_level = "Dangerous"
         
-        # Reuse the cached geocoding (already resolved by frontend click)
-        # Accept pre-resolved name from frontend to avoid a second lookup.
         location_name = req.get('location_name', '')
         if not location_name:
-            # Fallback: use cached lookup (will be instant if user already clicked)
             location_name = get_location_name(lat, lng, use_gemini=False)
         
-        # Single Gemini call: safety insight only (no redundant formatting)
         gemini_insight = "AI insight unavailable."
         if gemini_model:
             try:

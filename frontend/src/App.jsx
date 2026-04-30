@@ -104,7 +104,13 @@ function App() {
       };
 
       const res = await axios.post('http://127.0.0.1:5000/api/predict', payload);
-      setPrediction(res.data);
+
+      // Handle out-of-coverage response
+      if (res.data.out_of_coverage) {
+        setPrediction({ out_of_coverage: true, message: res.data.message });
+      } else {
+        setPrediction(res.data);
+      }
     } catch (err) {
       console.error(err);
       alert("Failed to fetch prediction.");
@@ -205,54 +211,75 @@ function App() {
           {/* Prediction Result Box */}
           {prediction && (
             <div className="glass-panel p-6">
-              <h3 className="text-lg font-semibold text-blue-300 mb-3 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-400" /> Threat Assessment
-              </h3>
-
-              {prediction.location_name && (
-                <div className="text-sm text-slate-300 mb-4 bg-slate-800/50 p-2 rounded border border-slate-700 flex items-center gap-2">
-                  <MapIcon className="w-4 h-4 text-blue-400" />
-                  <span className="truncate">{prediction.location_name}</span>
-                </div>
-              )}
-
-              {/* Gemini AI Insight Card */}
-              {prediction.gemini_insight && (
-                <div className="mb-4 bg-indigo-900/40 border border-indigo-500/30 p-3 rounded-lg shadow-inner">
-                  <div className="text-xs text-indigo-300 font-semibold mb-1 flex items-center gap-1">
-                    <Activity className="w-3 h-3" /> AI Safety Assistant
+              {prediction.out_of_coverage ? (
+                /* ── Out-of-coverage warning ── */
+                <>
+                  <h3 className="text-lg font-semibold text-amber-400 mb-3 flex items-center gap-2">
+                    <AlertTriangle className="w-5 h-5 text-amber-400" /> Out of Coverage
+                  </h3>
+                  <div className="bg-amber-900/30 border border-amber-500/30 p-4 rounded-lg">
+                    <p className="text-sm text-amber-200 leading-relaxed">
+                      {prediction.message}
+                    </p>
+                    <p className="text-xs text-amber-400/70 mt-3">
+                      Predictions are only available for locations within the crime-data heatmap zones.
+                      Try clicking on a highlighted area on the map.
+                    </p>
                   </div>
-                  <p className="text-sm text-indigo-100/90 leading-relaxed italic">
-                    "{prediction.gemini_insight}"
-                  </p>
-                </div>
-              )}
+                </>
+              ) : (
+                /* ── Normal threat assessment ── */
+                <>
+                  <h3 className="text-lg font-semibold text-blue-300 mb-3 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-blue-400" /> Threat Assessment
+                  </h3>
 
-              {/* Safety Score Gauge */}
-              <SafetyGauge score={prediction.safety_score} level={prediction.safety_level} />
-
-              {/* Top Predictions */}
-              <div className="space-y-2">
-                <div className="text-xs text-slate-400 mb-1">Predicted Crime Probabilities</div>
-                {prediction.top_predictions && prediction.top_predictions.map((tp, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div className="flex-1">
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className={`capitalize ${i === 0 ? 'text-red-400 font-semibold' : 'text-slate-400'}`}>
-                          {tp.crime}
-                        </span>
-                        <span className="text-slate-500">{tp.probability}%</span>
-                      </div>
-                      <div className="w-full bg-slate-800 rounded-full h-1.5">
-                        <div
-                          className={`h-1.5 rounded-full ${i === 0 ? 'bg-red-500' : i === 1 ? 'bg-orange-500' : 'bg-yellow-500'}`}
-                          style={{ width: `${tp.probability}%` }}
-                        ></div>
-                      </div>
+                  {prediction.location_name && (
+                    <div className="text-sm text-slate-300 mb-4 bg-slate-800/50 p-2 rounded border border-slate-700 flex items-center gap-2">
+                      <MapIcon className="w-4 h-4 text-blue-400" />
+                      <span className="truncate">{prediction.location_name}</span>
                     </div>
+                  )}
+
+                  {/* Gemini AI Insight Card */}
+                  {prediction.gemini_insight && (
+                    <div className="mb-4 bg-indigo-900/40 border border-indigo-500/30 p-3 rounded-lg shadow-inner">
+                      <div className="text-xs text-indigo-300 font-semibold mb-1 flex items-center gap-1">
+                        <Activity className="w-3 h-3" /> AI Safety Assistant
+                      </div>
+                      <p className="text-sm text-indigo-100/90 leading-relaxed italic">
+                        "{prediction.gemini_insight}"
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Safety Score Gauge */}
+                  <SafetyGauge score={prediction.safety_score} level={prediction.safety_level} />
+
+                  {/* Top Predictions */}
+                  <div className="space-y-2">
+                    <div className="text-xs text-slate-400 mb-1">Predicted Crime Probabilities</div>
+                    {prediction.top_predictions && prediction.top_predictions.map((tp, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div className="flex-1">
+                          <div className="flex justify-between text-xs mb-1">
+                            <span className={`capitalize ${i === 0 ? 'text-red-400 font-semibold' : 'text-slate-400'}`}>
+                              {tp.crime}
+                            </span>
+                            <span className="text-slate-500">{tp.probability}%</span>
+                          </div>
+                          <div className="w-full bg-slate-800 rounded-full h-1.5">
+                            <div
+                              className={`h-1.5 rounded-full ${i === 0 ? 'bg-red-500' : i === 1 ? 'bg-orange-500' : 'bg-yellow-500'}`}
+                              style={{ width: `${tp.probability}%` }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </>
+              )}
             </div>
           )}
 
